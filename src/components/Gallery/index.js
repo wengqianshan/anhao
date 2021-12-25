@@ -20,7 +20,7 @@ export default function Gallery(props) {
   return (
     <View>
       {items.map((item, index) => {
-        const { covers, type, url, playing = false, width: w, height: h } = item || {};
+        const { covers, type, url, playing = false, width: w = 375, height: h = 200 } = item || {};
         const height = h * width / w;
         if (/video/.test(type)) {
           return playing ? (

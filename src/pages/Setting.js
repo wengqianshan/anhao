@@ -25,7 +25,7 @@ export default function Setting() {
             dispatch({
               type: "SET_HOST",
               payload: {
-                host: "http://192.168.31.26:7000",
+                host: "http://192.168.31.41:7000",
               },
             });
           }}
