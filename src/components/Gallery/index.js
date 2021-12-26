@@ -6,6 +6,7 @@ import {
   Image,
   TouchableWithoutFeedback,
   Dimensions,
+  useWindowDimensions,
 } from "react-native";
 
 import { Video } from "expo-av";
@@ -13,10 +14,9 @@ import { Video } from "expo-av";
 import { host } from "../../utils/request";
 import IconFont from "../../iconfont";
 
-const { width } = Dimensions.get("window");
-
 export default function Gallery(props) {
   const { items = [], onItemClick } = props;
+  const { width } = useWindowDimensions();
   return (
     <View>
       {items.map((item, index) => {
